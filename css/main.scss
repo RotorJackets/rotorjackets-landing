@@ -1,0 +1,131 @@
+$gt-yellow: #EBA900;
+$gray0: #181818;
+$gray1: #585858;
+@import "../fontawesome/fontawesome.scss";
+@import "../fontawesome/solid.scss";
+@import "../fontawesome/brands.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: inherit;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" on;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-align: center;
+  padding: 4em;
+  color: white;
+  display: flex;
+//   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient($gray1, $gray0)
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 4em;
+    color: $gt-yellow;
+    line-height: .1em;
+}
+
+.quirk {
+    z-index: 1;
+    transform: rotateZ(-25deg);
+}
+
+.opacity0 {
+    opacity: .2;
+}
+
+.opacity1 {
+    opacity: .1;
+}
+
+.logo {
+    position: relative;
+    width: 7em;
+    float: right;
+    margin-top: -3em;
+    z-index: 2;
+}
+
+.discord-container {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: white;
+    font-weight: 700;
+}
+
+i, .mgp-container {
+    transition: all .2s ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    width: 15em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    object {
+        width: 40px;
+        filter: invert(1);
+        margin-bottom: -10px;
+    }
+    .mgp {
+        margin-left: -5px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* only required for <img /> */
+        z-index: -1000;
+    }
+    
+    .mgp-container {
+        display: inline-block;
+        position: relative;
+        width: 2.4em;
+        padding-bottom: 60%;
+        z-index: 1;
+        vertical-align: middle;
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+        }
+    }
+}
+
+
+.title-container {
+    justify-content: center;
+}
+
+.headline-container {
+    width: fit-content;
+}
