@@ -42,6 +42,23 @@ h1 {
     line-height: .1em;
 }
 
+@media only screen and (max-width: 600px) {
+    h1 {
+      opacity: 0 !important;
+    }
+    .quirk {
+        transform: rotateZ(0deg) !important;
+    }
+    body {
+        align-items: flex-start !important;
+    }
+    .logo {
+        float: none !important;
+        margin-top: 1em !important;
+        width: 10em !important;
+    }
+  }
+
 .quirk {
     z-index: 1;
     transform: rotateZ(-25deg);
