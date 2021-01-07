@@ -6158,10 +6158,14 @@ h1 {
   z-index: 2;
 }
 
+.discord {
+  width: 15em;
+}
+
 .discord-container {
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: 10px;
+  bottom: 10px;
   color: white;
   font-weight: 700;
 }
