@@ -46,6 +46,7 @@ h1 {
 @media only screen and (max-width: 600px) {
     h1 {
       opacity: 0 !important;
+      display: none !important;
     }
     .quirk {
         transform: rotateZ(0deg) !important;
