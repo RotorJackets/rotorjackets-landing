@@ -1,9 +1,13 @@
-$gt-yellow: #EBA900;
-$gray0: #181818;
-$gray1: #585858;
 @import "../fontawesome/fontawesome.scss";
 @import "../fontawesome/solid.scss";
 @import "../fontawesome/brands.scss";
+
+$gt-yellow: #EBA900;
+$gray0: #181818;
+$gray1: #585858;
+$gt-blue: #002c58;
+$mobile-width: 930px;
+$drop: drop-shadow(0 0 0.75rem black);
 
 * {
   margin: 0;
@@ -27,24 +31,124 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-align: center;
-  padding: 4em;
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background: linear-gradient($gray1, $gray0)
+  background: linear-gradient($gray1, $gray0);
+  overflow: hidden;
+  direction: rtl;
 }
 
-h1 {
+
+.flex-root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#bgvid {
+    opacity: .6;
+    object-fit: cover;
+    width: auto;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+$nav-height: 3em;
+
+// NAV
+.nav {
+    z-index:99;
+    filter: $drop;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $nav-height;
+    background-color: $gt-blue;
+    img {
+        float: left;
+        height: 120%;
+    }
+    font-weight: 600;
+}
+
+
+.nav-list {
+    // nav-items
+    margin-top: .70em;
+    li {
+        display: inline-block;
+        margin-right: 1%;
+        padding: 0;
+        a {
+            margin: 0
+        }
+    }
+}
+
+.nav-borgor {
+    display: none;
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .dropdown {
+        &:hover,
+        &:focus-within {
+            .nav-list {
+                border-radius: 0px 0px 0px 30px;
+                padding-top: $nav-height;
+                margin-top: 0;
+                right: 0;
+                padding-right: 1em;
+                padding-left: 1em;
+                position: absolute;
+                background-color: $gt-blue;
+                // background-color: fuchsia;
+                text-align: right;
+                display: block;
+                li {
+                    display: block;
+                    margin-bottom: 1em;
+                }
+            }
+        }
+    }
+    .nav-list {
+        float: right;
+        display: none;
+        li {
+            padding: 0;
+            a {
+                margin: 0
+            }
+        }
+    }
+    .nav-borgor {
+        z-index: 999;
+        display: inline-block;
+        float: right;
+        margin-right: 20px;
+        margin-top: .2em;
+        font-size: 2em;
+    }
+}
+
+
+
+
+.title-container > h1 {
     font-weight: 900;
     font-size: 4em;
     color: $gt-yellow;
     line-height: .1em;
 }
 
-@media only screen and (max-width: 600px) {
-    h1 {
+@media only screen and (max-width: $mobile-width) {
+    .title-container > h1 {
       opacity: 0 !important;
       display: none !important;
     }
@@ -59,11 +163,11 @@ h1 {
         margin-top: 1em !important;
         width: 10em !important;
     }
-  }
+}
 
 .quirk {
     z-index: 1;
-    transform: rotateZ(-25deg);
+    // transform: rotateZ(-25deg);
 }
 
 .opacity0 {
@@ -97,9 +201,10 @@ h1 {
     bottom: 10px;
     color: white;
     font-weight: 700;
+    filter: $drop;
 }
 
-i, .mgp-container {
+.i-grow, .mgp-container {
     transition: all .2s ease-in-out;
     &:hover {
         transform: scale(1.2);
@@ -132,6 +237,10 @@ i, .mgp-container {
     
     .mgp-container {
         display: inline-block;
+
+        // The mgp logo is a little off center from the others, this corrects it.
+        margin-top: 6px;
+
         position: relative;
         width: 2.4em;
         padding-bottom: 60%;
@@ -148,12 +257,6 @@ i, .mgp-container {
     }
 }
 
-.cal-link {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
 .centered-container {
     width: fit-content;
     height: fit-content;
@@ -167,4 +270,46 @@ i, .mgp-container {
 
 .headline-container {
     width: fit-content;
+    filter: $drop;
+}
+
+.ty-is-a-god {
+    width: 80vh;
+    margin-bottom: -5vh;
+    z-index: -99;
+}
+
+// scrollbar
+
+/*
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+*/
+
+::-webkit-scrollbar-track
+{
+    display: none;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+::-webkit-scrollbar-thumb
+{
+    display: none;
 }
