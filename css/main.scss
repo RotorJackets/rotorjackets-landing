@@ -97,6 +97,7 @@ $nav-height: 3em;
     display: none;
 }
 
+
 @media only screen and (max-width: $mobile-width) {
     .dropdown {
         &:hover,
@@ -151,6 +152,14 @@ $nav-height: 3em;
     font-size: 4em;
     color: $gt-yellow;
     line-height: .1em;
+}
+
+
+.page-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: $offwhite;
+    filter: $drop;
 }
 
 @media only screen and (max-width: $mobile-width) {
