@@ -6164,6 +6164,7 @@ body {
 
 .nav-list {
   margin-top: 0.7em;
+  direction: ltr;
 }
 .nav-list li {
   display: inline-block;
@@ -6394,7 +6395,6 @@ body {
 .content {
   margin-top: 3em;
   height: 100%;
-  flex-direction: column;
   overflow-y: scroll;
 }
 
@@ -6422,6 +6422,10 @@ body {
 
 .sec1 {
   background-image: url("../img/about1_.jpg");
+}
+
+.sec3 {
+  background-image: url("../img/about5.png");
 }
 
 /*# sourceMappingURL=about.css.map */

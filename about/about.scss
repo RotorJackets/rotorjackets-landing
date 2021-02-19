@@ -9,7 +9,6 @@ body {
 .content {
     margin-top: $nav-height;
     height: 100%;
-    flex-direction: column;
     overflow-y: scroll;
 }
 
@@ -45,5 +44,5 @@ body {
 }
 
 .sec3 {
-    
+    background-image: url('../img/about5.png');
 }

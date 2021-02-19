@@ -6,6 +6,7 @@ $gt-yellow: #EBA900;
 $gray0: #181818;
 $gray1: #585858;
 $gt-blue: #002c58;
+$gt-gold: #B3A369;
 $mobile-width: 930px;
 $drop: drop-shadow(0 0 0.75rem black);
 
@@ -80,6 +81,7 @@ $nav-height: 3em;
 .nav-list {
     // nav-items
     margin-top: .70em;
+    direction: ltr;
     li {
         display: inline-block;
         margin-right: 1%;
