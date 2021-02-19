@@ -24,6 +24,8 @@ body {
 .team-title {
     font-size: 2em;
     font-weight: 700;
+    color: $offwhite;
+    filter: $drop;
 }
 
 .pilot {
@@ -52,7 +54,7 @@ body {
     flex-grow: 2;
     // min-width: 300px;
     max-width: 650px;
-    background-color: #fff5e3;
+    background-color: $offwhite;
     padding: 30px;
     filter: $drop;
 }

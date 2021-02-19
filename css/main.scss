@@ -8,6 +8,7 @@ $gray1: #585858;
 $gt-blue: #002c58;
 $gt-gold: #B3A369;
 $mobile-width: 930px;
+$offwhite: #fff5e3;
 $drop: drop-shadow(0 0 0.75rem black);
 
 * {
@@ -101,27 +102,30 @@ $nav-height: 3em;
         &:hover,
         &:focus-within {
             .nav-list {
-                border-radius: 0px 0px 0px 30px;
-                padding-top: $nav-height;
-                margin-top: 0;
-                right: 0;
-                padding-right: 1em;
-                padding-left: 1em;
-                position: absolute;
-                background-color: $gt-blue;
-                // background-color: fuchsia;
-                text-align: right;
-                display: block;
-                li {
-                    display: block;
-                    margin-bottom: 1em;
-                }
+                opacity: 1;
+                pointer-events: all;
             }
         }
     }
     .nav-list {
+        transition: opacity .2s ease-in-out 0s;
+        opacity: 0;
+        pointer-events: none;
         float: right;
-        display: none;
+        border-radius: 0px 0px 0px 30px;
+        padding-top: $nav-height;
+        margin-top: 0;
+        right: 0;
+        padding-right: 1em;
+        padding-left: 1em;
+        position: absolute;
+        background-color: $gt-blue;
+        // background-color: fuchsia;
+        text-align: right;
+        li {
+            display: block;
+            margin-bottom: 1em;
+        }
         li {
             padding: 0;
             a {
@@ -132,9 +136,9 @@ $nav-height: 3em;
     .nav-borgor {
         z-index: 999;
         display: inline-block;
-        float: right;
         margin-right: 20px;
         margin-top: .2em;
+        float: right;
         font-size: 2em;
     }
 }
@@ -214,6 +218,9 @@ $nav-height: 3em;
 }
 
 .links {
+    > a {
+        z-index: 1;
+    }
     display: flex;
     justify-content: space-around;
     width: 15em;
