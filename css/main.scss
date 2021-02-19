@@ -2,12 +2,12 @@
 @import "../fontawesome/solid.scss";
 @import "../fontawesome/brands.scss";
 
-$gt-yellow: #EBA900;
+$gt-yellow: #EAAA00;
 $gray0: #181818;
 $gray1: #585858;
 $gt-blue: #002c58;
 $gt-gold: #B3A369;
-$mobile-width: 930px;
+$mobile-width: 1050px;
 $offwhite: #fff5e3;
 $drop: drop-shadow(0 0 0.75rem black);
 
@@ -49,16 +49,15 @@ body {
     align-items: center;
 }
 
-
 #bgvid {
     opacity: .6;
     object-fit: cover;
-    width: auto;
-    height: 100vh;
     position: fixed;
-    top: 0;
-    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%
 }
+
 
 $nav-height: 3em;
 
@@ -82,10 +81,13 @@ $nav-height: 3em;
 .nav-list {
     // nav-items
     margin-top: .70em;
-    direction: ltr;
+    float: right;
+    text-align: left;
+    width: fit-content;
     li {
+        float: left;
         display: inline-block;
-        margin-right: 1%;
+        margin-right: 1.35em;
         padding: 0;
         a {
             margin: 0
@@ -109,6 +111,7 @@ $nav-height: 3em;
         }
     }
     .nav-list {
+        direction: rtl;
         transition: opacity .2s ease-in-out 0s;
         opacity: 0;
         pointer-events: none;
@@ -124,10 +127,10 @@ $nav-height: 3em;
         // background-color: fuchsia;
         text-align: right;
         li {
+            margin-right: .1em;
+            float: none;
             display: block;
             margin-bottom: 1em;
-        }
-        li {
             padding: 0;
             a {
                 margin: 0
@@ -189,11 +192,6 @@ $nav-height: 3em;
     opacity: .2;
 }
 
-#engage {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-}
 .opacity1 {
     opacity: .1;
 }
