@@ -6181,21 +6181,11 @@ body {
   display: none;
 }
 
-.nav-spacer {
-  display: none;
-}
-
 .dropdown {
   height: 3em;
 }
 
 @media only screen and (max-width: 1050px) {
-  .nav-spacer {
-    display: inline-block;
-    height: 3em;
-    width: 100%;
-  }
-
   .nav img {
     z-index: 99;
     float: left;

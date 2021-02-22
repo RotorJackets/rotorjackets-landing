@@ -28,21 +28,6 @@ body {
     flex-direction: row-reverse;
 }
 
-@media only screen and (max-width: $mobile-width) {
-    .section {
-        height: 50vh;
-    }
-    .big-about {
-        font-size: 5em;
-    }
-    .group {
-        flex-direction: column;
-    }
-    .group-reverse {
-        flex-direction: column;
-    }
-}
-
 .section {
     width: 100%;
     min-height: 50vh;
@@ -61,8 +46,30 @@ body {
     }
 }
 
+
 .text-container {
     padding: 2em;
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .section {
+        height: 50vh;
+    }
+    .text-container {
+        padding: 1em;
+        h1 {
+            font-size: 1.7em;
+        }
+    }
+    .big-about {
+        font-size: 4em;
+    }
+    .group {
+        flex-direction: column;
+    }
+    .group-reverse {
+        flex-direction: column;
+    }
 }
 
 .sec1 {
