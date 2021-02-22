@@ -8,7 +8,7 @@ $gray1: #585858;
 $gt-blue: #002c58;
 $gt-gold: #B3A369;
 $mobile-width: 1050px;
-$offwhite: #fff5e3;
+$offwhite: #fff; // jebaited
 $drop: drop-shadow(0 0 0.75rem black);
 
 * {
@@ -99,8 +99,29 @@ $nav-height: 3em;
     display: none;
 }
 
+.nav-spacer {
+    display: none;
+}
+
+.dropdown {
+    height: $nav-height;
+}
+
 
 @media only screen and (max-width: $mobile-width) {
+    .nav-spacer {
+        display: inline-block;
+        height: $nav-height;
+        width: 100%;
+    }
+
+    .nav {
+        img {
+            z-index: 99;
+            float: left;
+            height: 100%;
+        }
+    }
     .dropdown {
         &:hover,
         &:focus-within {
@@ -116,9 +137,8 @@ $nav-height: 3em;
         opacity: 0;
         pointer-events: none;
         float: right;
+        margin-top: $nav-height;
         border-radius: 0px 0px 0px 30px;
-        padding-top: $nav-height;
-        margin-top: 0;
         right: 0;
         padding-right: 1em;
         padding-left: 1em;

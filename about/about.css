@@ -6181,7 +6181,27 @@ body {
   display: none;
 }
 
+.nav-spacer {
+  display: none;
+}
+
+.dropdown {
+  height: 3em;
+}
+
 @media only screen and (max-width: 1050px) {
+  .nav-spacer {
+    display: inline-block;
+    height: 3em;
+    width: 100%;
+  }
+
+  .nav img {
+    z-index: 99;
+    float: left;
+    height: 100%;
+  }
+
   .dropdown:hover .nav-list, .dropdown:focus-within .nav-list {
     opacity: 1;
     pointer-events: all;
@@ -6193,9 +6213,8 @@ body {
     opacity: 0;
     pointer-events: none;
     float: right;
+    margin-top: 3em;
     border-radius: 0px 0px 0px 30px;
-    padding-top: 3em;
-    margin-top: 0;
     right: 0;
     padding-right: 1em;
     padding-left: 1em;
@@ -6233,7 +6252,7 @@ body {
 .page-title {
   font-size: 2em;
   font-weight: 700;
-  color: #fff5e3;
+  color: #fff;
   filter: drop-shadow(0 0 0.75rem black);
 }
 
@@ -6413,14 +6432,36 @@ body {
   line-height: 1em;
 }
 
+.group {
+  display: flex;
+  flex-direction: row;
+}
+
+.group-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 @media only screen and (max-width: 1050px) {
+  .section {
+    height: 50vh;
+  }
+
   .big-about {
     font-size: 5em;
+  }
+
+  .group {
+    flex-direction: column;
+  }
+
+  .group-reverse {
+    flex-direction: column;
   }
 }
 .section {
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   background-position: center;
@@ -6429,14 +6470,19 @@ body {
 }
 
 .text-section {
-  padding: 3em;
+  height: fit-content;
 }
 .text-section h1 {
   font-size: 3em;
   font-weight: 600;
 }
 
+.text-container {
+  padding: 2em;
+}
+
 .sec1 {
+  height: 50vh;
   background-image: url("../img/about1_.jpg");
 }
 
