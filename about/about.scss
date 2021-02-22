@@ -1,8 +1,6 @@
 @import "../css/main.scss";
 
 body {
-    background: none;
-    background-color: #eee;
     direction: ltr;
 }
 
@@ -30,19 +28,38 @@ body {
     height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     background-position: center;
+    justify-content: space-evenly;
     background-size: cover;
+}
+
+.text-section {
+    h1 {
+        font-size: 3em;
+        font-weight: 600;
+    }
+    padding: 3em;
 }
 
 .sec1 {
     background-image: url('../img/about1_.jpg');
 }
 
-.sec2 {
-    
-}
 
 .sec3 {
     background-image: url('../img/about5.png');
+}
+
+.sec5 {
+    background-image: url('../img/about-education.jpg');
+}
+
+.sec7 {
+    background-image: url('../img/about6.jpg');
+}
+.sec8 {
+    background-image: url('../img/about-wing.jpg');
+}
+.sec9 {
+    background-image: url('../img/about3.png');
 }
