@@ -1,0 +1,94 @@
+@import "../css/main.scss";
+
+body {
+    direction: ltr;
+}
+
+.content {
+    margin-top: $nav-height;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.big-about {
+    font-weight: 900;
+    font-size: 10em;
+    opacity: .7;
+    line-height: 1em;
+}
+
+
+.group {
+    display: flex;
+    flex-direction: row;
+}
+
+.group-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.section {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    justify-content: space-evenly;
+    background-size: cover;
+}
+
+.text-section {
+    height: fit-content;
+    h1 {
+        font-size: 3em;
+        font-weight: 600;
+    }
+}
+
+
+.text-container {
+    padding: 2em;
+}
+
+@media only screen and (max-width: $mobile-width) {
+    .text-container {
+        padding: 1em;
+        h1 {
+            font-size: 1.7em;
+        }
+    }
+    .big-about {
+        font-size: 4em;
+    }
+    .group {
+        flex-direction: column;
+    }
+    .group-reverse {
+        flex-direction: column;
+    }
+}
+
+.sec1 {
+    height: 50vh;
+    background-image: url('../img/about1_.jpg');
+}
+
+
+.sec3 {
+    background-image: url('../img/about5.png');
+}
+
+.sec5 {
+    background-image: url('../img/about-education.jpg');
+}
+
+.sec7 {
+    background-image: url('../img/about6.jpg');
+}
+.sec8 {
+    background-image: url('../img/about-wing.jpg');
+}
+.sec9 {
+    background-image: url('../img/about3.png');
+}
