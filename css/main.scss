@@ -160,9 +160,9 @@ $nav-height: 3em;
     .nav-borgor {
         z-index: 999;
         display: inline-block;
-        margin-right: 20px;
-        margin-top: .2em;
-        float: right;
+        position: absolute;
+        right: 20;
+        top: 10;
         font-size: 2em;
     }
 }
