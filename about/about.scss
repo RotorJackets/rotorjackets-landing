@@ -52,9 +52,6 @@ body {
 }
 
 @media only screen and (max-width: $mobile-width) {
-    .section {
-        height: 50vh;
-    }
     .text-container {
         padding: 1em;
         h1 {
