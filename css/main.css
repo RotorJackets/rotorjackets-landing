@@ -6233,7 +6233,7 @@ body {
 .title-container > h1 {
   font-weight: 900;
   font-size: 4em;
-  color: #EAAA00;
+  color: #eaaa00;
   line-height: 0.1em;
 }
 
@@ -6294,10 +6294,12 @@ body {
   filter: drop-shadow(0 0 0.75rem black);
 }
 
-.i-grow, .mgp-container {
+.i-grow,
+.mgp-container {
   transition: all 0.2s ease-in-out;
 }
-.i-grow:hover, .mgp-container:hover {
+.i-grow:hover,
+.mgp-container:hover {
   transform: scale(1.2);
 }
 
