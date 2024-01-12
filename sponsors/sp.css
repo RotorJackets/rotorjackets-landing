@@ -6409,10 +6409,11 @@ body {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   overflow-y: scroll;
   width: 100%;
   height: 100%;
-  display: block;
   padding-top: 5em;
 }
 
@@ -6426,8 +6427,9 @@ body {
   justify-content: space-around;
 }
 .sponsors img {
-  width: 40vh;
+  max-width: 40vh;
   height: auto;
+  margin: 20px;
 }
 
 .invert {
