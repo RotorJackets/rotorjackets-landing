@@ -6454,5 +6454,10 @@ body {
 .pilot > img {
   border-radius: 50%;
   width: 20vh;
+  height: 20vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
   margin-bottom: 20px;
 }/*# sourceMappingURL=pilots.css.map */
