@@ -6461,3 +6461,17 @@ body {
      object-position: top;
   margin-bottom: 20px;
 }/*# sourceMappingURL=pilots.css.map */
+
+.pilot-role {
+    font-size: 0.65rem;
+    font-weight: 10000;
+    margin-left: 6px;
+    padding: 2px 8px;
+
+    border-radius: 999px;
+
+    background: rgba(0, 0, 0, 0.08);
+    color: #000000;
+
+    vertical-align: middle;
+}
